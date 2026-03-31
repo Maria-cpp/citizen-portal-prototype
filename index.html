@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakistan Citizen Portal — Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="gov-banner"></div>
+
+<!-- ==================== LANDING ==================== -->
+<div id="page-landing" class="page">
+  <div class="auth-wrapper" style="flex-direction:column;padding:20px">
+    <div class="landing-hero">
+      <div class="auth-logo" style="width:90px;height:90px;font-size:2.2rem;margin-bottom:24px">
+        <i class="fas fa-star-and-crescent"></i>
+      </div>
+      <h1>Pakistan Citizen Portal</h1>
+      <p class="urdu-title">پاکستان سٹیزن پورٹل</p>
+      <p>A direct bridge between citizens and government. Lodge complaints, track resolutions, and help improve public service delivery across Pakistan.</p>
+      <div class="landing-actions">
+        <a href="#login" class="btn btn-gold btn-lg"><i class="fas fa-right-to-bracket"></i> Sign In</a>
+        <a href="#register" class="btn btn-outline btn-lg"><i class="fas fa-user-plus"></i> Register</a>
+      </div>
+      <div class="landing-stats">
+        <div class="landing-stat"><span class="num">4.2M+</span><span class="label">Registered Citizens</span></div>
+        <div class="landing-stat"><span class="num">3.8M+</span><span class="label">Complaints Resolved</span></div>
+        <div class="landing-stat"><span class="num">500+</span><span class="label">Departments Connected</span></div>
+      </div>
+    </div>
+    <div style="position:absolute;bottom:20px;text-align:center;z-index:1">
+      <a href="#contact" style="color:rgba(255,255,255,0.6);font-size:0.85rem"><i class="fas fa-headset"></i> Need Help? Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== LOGIN ==================== -->
+<div id="page-login" class="page">
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-logo"><i class="fas fa-star-and-crescent"></i></div>
+      <h2 class="auth-title">Welcome Back</h2>
+      <p class="auth-subtitle">Sign in to Pakistan Citizen Portal</p>
+      <div class="text-center mb-lg">
+        <div class="toggle-group">
+          <button class="toggle-btn active">CNIC</button>
+          <button class="toggle-btn">Passport</button>
+          <button class="toggle-btn">Username</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">CNIC Number <span class="required">*</span></label>
+        <input type="text" class="form-input" placeholder="XXXXX-XXXXXXX-X">
+        <span class="form-hint">شناختی کارڈ نمبر</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password <span class="required">*</span></label>
+        <input type="password" class="form-input" placeholder="Enter your password">
+      </div>
+      <div class="flex justify-between items-center mb-lg text-sm">
+        <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox"> Remember me</label>
+        <a href="#forgot-password">Forgot Password?</a>
+      </div>
+      <a href="#dashboard" class="btn btn-primary btn-block btn-lg">Sign In</a>
+      <div class="auth-footer">
+        Don't have an account? <a href="#register">Register here</a>
+        <br><br>
+        <a href="#admin-dashboard" style="font-size:0.8rem;color:var(--gray-500)"><i class="fas fa-shield-halved"></i> Officer / Admin Login</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== REGISTER ==================== -->
+<div id="page-register" class="page">
+  <div class="auth-wrapper">
+    <div class="auth-card wide">
+      <div class="auth-logo"><i class="fas fa-user-plus"></i></div>
+      <h2 class="auth-title">Create Account</h2>
+      <p class="auth-subtitle">Select your citizenship type to register</p>
+      <div class="reg-type-cards">
+        <a href="#register-inland" class="reg-type-card">
+          <div class="reg-type-icon"><i class="fas fa-id-card"></i></div>
+          <div class="reg-type-info">
+            <h4>Inland Citizen</h4>
+            <p class="text-sm">پاکستانی شہری — Register using your CNIC</p>
+          </div>
+          <i class="fas fa-chevron-right" style="color:var(--gray-400);margin-left:auto"></i>
+        </a>
+        <a href="#register-inland" class="reg-type-card">
+          <div class="reg-type-icon"><i class="fas fa-plane-departure"></i></div>
+          <div class="reg-type-info">
+            <h4>Overseas Pakistani</h4>
+            <p class="text-sm">بیرون ملک پاکستانی — Register using Passport</p>
+          </div>
+          <i class="fas fa-chevron-right" style="color:var(--gray-400);margin-left:auto"></i>
+        </a>
+        <a href="#register-inland" class="reg-type-card">
+          <div class="reg-type-icon"><i class="fas fa-globe"></i></div>
+          <div class="reg-type-info">
+            <h4>Foreigner</h4>
+            <p class="text-sm">غیر ملکی — Register using Passport</p>
+          </div>
+          <i class="fas fa-chevron-right" style="color:var(--gray-400);margin-left:auto"></i>
+        </a>
+      </div>
+      <div class="auth-footer">Already have an account? <a href="#login">Sign in here</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== REGISTER INLAND ==================== -->
+<div id="page-register-inland" class="page">
+  <div class="auth-wrapper">
+    <div class="auth-card wide">
+      <div class="auth-logo"><i class="fas fa-id-card"></i></div>
+      <h2 class="auth-title">Register as Inland Citizen</h2>
+      <p class="auth-subtitle">بطور نیا شہری رجسٹر کریں</p>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Full Name <span class="required">*</span></label><input type="text" class="form-input" placeholder="Enter full name"></div>
+        <div class="form-group"><label class="form-label">CNIC <span class="required">*</span></label><input type="text" class="form-input" placeholder="XXXXX-XXXXXXX-X"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Mobile Number <span class="required">*</span></label><input type="tel" class="form-input" placeholder="03XX-XXXXXXX"></div>
+        <div class="form-group"><label class="form-label">Date of Birth <span class="required">*</span></label><input type="date" class="form-input"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Gender <span class="required">*</span></label>
+        <select class="form-select"><option>Select Gender</option><option>Male</option><option>Female</option><option>Other</option></select>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Password <span class="required">*</span></label><input type="password" class="form-input" placeholder="Create password"></div>
+        <div class="form-group"><label class="form-label">Confirm Password <span class="required">*</span></label><input type="password" class="form-input" placeholder="Confirm password"></div>
+      </div>
+      <a href="#login" class="btn btn-primary btn-block btn-lg mt-md">Register</a>
+      <div class="auth-footer">Already have an account? <a href="#login">Sign in</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== FORGOT PASSWORD ==================== -->
+<div id="page-forgot-password" class="page">
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-logo"><i class="fas fa-key"></i></div>
+      <h2 class="auth-title">Forgot Password?</h2>
+      <p class="auth-subtitle">Enter your CNIC or Passport to reset password</p>
+      <div class="text-center mb-lg">
+        <div class="toggle-group">
+          <button class="toggle-btn active">CNIC</button>
+          <button class="toggle-btn">Passport #</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">CNIC Number</label>
+        <input type="text" class="form-input" placeholder="XXXXX-XXXXXXX-X">
+      </div>
+      <button class="btn btn-primary btn-block btn-lg">Send Reset Link</button>
+      <div class="auth-footer"><a href="#login"><i class="fas fa-arrow-left"></i> Back to Login</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CONTACT ==================== -->
+<div id="page-contact" class="page">
+  <div class="auth-wrapper">
+    <div class="auth-card wide">
+      <div class="auth-logo"><i class="fas fa-headset"></i></div>
+      <h2 class="auth-title">Contact & Support</h2>
+      <p class="auth-subtitle">We're here to help you</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px">
+        <div class="card" style="padding:20px;text-align:center"><i class="fas fa-phone" style="font-size:1.5rem;color:var(--green-700);margin-bottom:8px;display:block"></i><strong>Helpline</strong><br><span class="text-muted">051-9000111</span></div>
+        <div class="card" style="padding:20px;text-align:center"><i class="fas fa-envelope" style="font-size:1.5rem;color:var(--green-700);margin-bottom:8px;display:block"></i><strong>Email</strong><br><span class="text-muted">support@citizenportal.gov.pk</span></div>
+      </div>
+      <div class="form-group"><label class="form-label">Your Message</label><textarea class="form-textarea" placeholder="Describe your issue..."></textarea></div>
+      <button class="btn btn-primary btn-block">Send Message</button>
+      <div class="auth-footer"><a href="#landing"><i class="fas fa-arrow-left"></i> Back to Home</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CITIZEN DASHBOARD PAGES (with sidebar layout)
+     ============================================================ -->
+
+<!-- Shared Sidebar + Header for Citizen pages -->
+<div id="page-dashboard" class="page">
+  <div class="dashboard-layout">
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">CP</div>
+        <div class="sidebar-brand">Citizen Portal<small>Government of Pakistan</small></div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Main</div>
+        <a href="#dashboard" class="nav-item active" data-route="dashboard"><span class="icon"><i class="fas fa-house"></i></span> Dashboard</a>
+        <a href="#complaint-create" class="nav-item" data-route="complaint-create"><span class="icon"><i class="fas fa-plus-circle"></i></span> Lodge Complaint</a>
+        <a href="#complaints" class="nav-item" data-route="complaints"><span class="icon"><i class="fas fa-list"></i></span> My Complaints <span class="nav-badge">3</span></a>
+        <div class="nav-section-title">Account</div>
+        <a href="#profile" class="nav-item" data-route="profile"><span class="icon"><i class="fas fa-user"></i></span> Profile</a>
+        <a href="#contact" class="nav-item"><span class="icon"><i class="fas fa-circle-question"></i></span> Help & Support</a>
+        <a href="#login" class="nav-item"><span class="icon"><i class="fas fa-right-from-bracket"></i></span> Logout</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-user"><div class="sidebar-avatar">AK</div><div><div class="sidebar-user-name">Ahmad Khan</div><div class="sidebar-user-role">Citizen</div></div></div>
+      </div>
+    </aside>
+    <div class="main-content">
+      <header class="top-header">
+        <div class="header-left"><button class="menu-toggle"><i class="fas fa-bars"></i></button><div class="breadcrumb"><span>Home</span> <i class="fas fa-chevron-right" style="font-size:0.6rem"></i> <span class="current">Dashboard</span></div></div>
+        <div class="header-right">
+          <button class="header-icon-btn"><i class="fas fa-bell"></i><span class="notif-badge">5</span></button>
+          <button class="header-icon-btn"><i class="fas fa-user-circle"></i></button>
+        </div>
+      </header>
+      <div class="page-content">
+        <div class="flex justify-between items-center mb-lg" style="flex-wrap:wrap;gap:12px">
+          <div class="page-header" style="margin-bottom:0"><h1>Welcome, Ahmad 👋</h1><p>Here's an overview of your complaint activity</p></div>
+          <a href="#complaint-create" class="btn btn-primary"><i class="fas fa-plus"></i> Lodge New Complaint</a>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-icon blue"><i class="fas fa-file-lines"></i></div><div class="stat-info"><div class="stat-value">12</div><div class="stat-label">Total Complaints</div></div></div>
+          <div class="stat-card"><div class="stat-icon orange"><i class="fas fa-clock"></i></div><div class="stat-info"><div class="stat-value">3</div><div class="stat-label">In Progress</div><div class="stat-trend up">↑ Under review</div></div></div>
+          <div class="stat-card"><div class="stat-icon green"><i class="fas fa-circle-check"></i></div><div class="stat-info"><div class="stat-value">8</div><div class="stat-label">Resolved</div><div class="stat-trend up">↑ 67% rate</div></div></div>
+          <div class="stat-card"><div class="stat-icon red"><i class="fas fa-circle-xmark"></i></div><div class="stat-info"><div class="stat-value">1</div><div class="stat-label">Rejected</div></div></div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>Recent Complaints</h3><a href="#complaints" class="btn btn-sm btn-secondary">View All</a></div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead><tr><th>Tracking ID</th><th>Subject</th><th>Department</th><th>Status</th><th>Filed</th></tr></thead>
+              <tbody>
+                <tr onclick="navigateTo('complaint-detail')"><td><strong>CP-2026-00847</strong></td><td>Road damage on GT Road, Rawalpindi</td><td>Highway Authority</td><td><span class="badge badge-progress">In Progress</span></td><td>28 Mar 2026</td></tr>
+                <tr onclick="navigateTo('complaint-detail')"><td><strong>CP-2026-00812</strong></td><td>Water supply issue in Sector G-11</td><td>CDA — Water Wing</td><td><span class="badge badge-filed">Filed</span></td><td>25 Mar 2026</td></tr>
+                <tr onclick="navigateTo('complaint-detail')"><td><strong>CP-2026-00798</strong></td><td>Electricity load shedding schedule</td><td>IESCO</td><td><span class="badge badge-resolved">Resolved</span></td><td>22 Mar 2026</td></tr>
+                <tr onclick="navigateTo('complaint-detail')"><td><strong>CP-2026-00756</strong></td><td>Passport renewal delay — Islamabad</td><td>DGIP</td><td><span class="badge badge-resolved">Resolved</span></td><td>18 Mar 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Remaining pages loaded from separate file -->
+<script src="pages.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
