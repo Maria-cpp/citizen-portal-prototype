@@ -5,7 +5,7 @@
 const sidebarCitizen = `
 <div class="sidebar-overlay"></div>
 <aside class="sidebar">
-  <div class="sidebar-header"><div class="sidebar-logo">CP</div><div class="sidebar-brand">Citizen Portal<small>Government of Pakistan</small></div></div>
+  <div class="sidebar-header"><div class="sidebar-logo" style="background:transparent;"><img src="logo.png" style="width:100%;height:100%;object-fit:contain;" alt="Logo"></div><div class="sidebar-brand">Citizen Portal<small>Government of Pakistan</small></div></div>
   <nav class="sidebar-nav">
     <div class="nav-section-title">Main</div>
     <a href="#dashboard" class="nav-item" data-route="dashboard"><span class="icon"><i class="fas fa-house"></i></span> Dashboard</a>
@@ -29,7 +29,7 @@ const headerHTML = (crumb, title) => `
 const sidebarAdmin = `
 <div class="sidebar-overlay"></div>
 <aside class="sidebar" style="background:var(--gray-900)">
-  <div class="sidebar-header"><div class="sidebar-logo" style="background:var(--status-progress)">A</div><div class="sidebar-brand">Admin Panel<small>Citizen Portal — Officer</small></div></div>
+  <div class="sidebar-header"><div class="sidebar-logo" style="background:transparent;"><img src="logo.png" style="width:100%;height:100%;object-fit:contain;" alt="Logo"></div><div class="sidebar-brand">Admin Panel<small>Citizen Portal — Officer</small></div></div>
   <nav class="sidebar-nav">
     <div class="nav-section-title">Overview</div>
     <a href="#admin-dashboard" class="nav-item" data-route="admin-dashboard"><span class="icon"><i class="fas fa-gauge-high"></i></span> Dashboard</a>
